@@ -448,13 +448,13 @@ footer {
     top: 0;
     left: 0;
     z-index: 2000;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
 
 .mostrar {
-    display: none;
+    display: flex;
 }
 
 .modal {
@@ -499,3 +499,22 @@ footer {
     background-color: var(--cor3);
     color: var(--cor4);
 }
+
+/* FORMATAÇÃO ANIMAÇÃO DO MODAL */
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -80px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.mostrar .modal {
+    animation: modal 3s;
+}
+
+
